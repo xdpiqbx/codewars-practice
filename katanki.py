@@ -329,4 +329,73 @@
 #     return a
 # # return sorted(a, reverse=d=='L')
 
+# ================================== Name Your Python! 0056
+# class Python:
+#     def __init__(self, name):
+#         self.name = name
+
+# ================================== Color Ghost 0057
+# import random
+# class Ghost:
+#     def __init__(self):
+#         self.color = random.choice(["white", "yellow", "purple", "red"])
+
+# ================================== Barking mad 0058
+# class Dog():
+#     def __init__(self, breed):
+#         self.breed = breed
+#     def bark(self):
+#         return "Woof"
+#
+# snoopy = Dog("Beagle")
+# scoobydoo = Dog("Great Dane")
+
+# ================================== Are there any arrows left? 0059
+# def any_arrows(arrows):
+#     all_arrows = len(arrows)
+#     if all_arrows == 0:
+#         return False
+#
+#     damaged_arrows = 0
+#
+#     for arrow in arrows:
+#         if 'damaged' in arrow.keys() and arrow['damaged']:
+#             damaged_arrows += 1
+#
+#     return damaged_arrows != all_arrows
+# def any_arrows(arrows):
+#     return sum([1 for arrow in arrows if 'damaged' in arrow.keys() and arrow['damaged']]) != len(arrows)
+#     # return any(not arrow.get("damaged", False) for arrow in arrows)
+
+# ================================== Fix the loop! 0060
+# def list_animals(animals):
+#     list = ''
+#     for i in range(len(animals)):
+#         list += str(i + 1) + '. ' + animals[i] + '\n'
+#     return list
+
+# ================================== Grasshopper - Array Mean 0061
+# def find_average(nums):
+#     return sum(nums) / len(nums) if len(nums) else 0
+
+# ================================== Javascript filter - 1 0062
+# def search_names(logins):
+#     return [creds for creds in logins if creds[0].endswith("_")]
+#     # return list(filter(lambda a: a[0].endswith('_'), logins))
+
+# ================================== Return a sorted list of objects 0063
+# def sort_list(sort_by, lst):
+#     lst.sort(reverse=True, key=lambda item: item[sort_by])
+#     return lst
+#     # return sorted(lst, reverse=True, key=lambda item: item[sort_by])
+
+# ================================== Unpacking Arguments 0064
+# def spread(func, args):
+#     return func(*args)
+
+# ================================== Lazily executing a function 0065
+# def make_lazy(f, *args, **kwargs):
+#     return lambda: f(*args, **kwargs)
+
+
 # https://www.codewars.com/kata/search/python?q=&r%5B%5D=-8&xids=played&beta=false&order_by=popularity%20desc
