@@ -397,5 +397,201 @@
 # def make_lazy(f, *args, **kwargs):
 #     return lambda: f(*args, **kwargs)
 
+# ================================== Multiples of 3 or 5 0066
+# def solution(number):
+#     if number < 0:
+#         return 0
+#     return sum(num for num in range(number) if num % 3 == 0 or num % 5 == 0)
+
+# ================================== Vowel Count 0067
+# def get_count(sentence):
+#     return sum(1 for letter in sentence if letter in "aeiou")
+
+# ================================== Find the odd int 0068
+# def find_it(seq):
+#     dict_nums = {}
+#     for num in seq:
+#         dict_nums[num] = seq.count(num)
+#     for item in dict_nums.items():
+#         if item[1] % 2 != 0:
+#           return item[0]
+
+# def find_it(seq):
+#     for num in seq:
+#         if seq.count(num) % 2 != 0:
+#             return num
+
+# ================================== Find the odd int 0069
+# def two_sort(array):
+#     array.sort()
+#     return "***".join(list(array[0]))
+#     # return '***'.join(sorted(arr)[0])
+#     # return '***'.join(min(array))
+
+# ================================== Find the odd int 0070
+# def sorter(textbooks):
+#     return sorted(textbooks, key=lambda s: s.lower())
+#     # return sorted(textbooks, key=str.lower)
+
+# ================================== Find the odd int 0071
+# greek_alphabet = (
+#     'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta',
+#     'eta', 'theta', 'iota', 'kappa', 'lambda', 'mu',
+#     'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma',
+#     'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega')
+# def greek_comparator(lhs, rhs):
+#     # the tuple greek_alphabet is defined in the global namespace
+#     return greek_alphabet.index(lhs) - greek_alphabet.index(rhs)
+#
+# greek_comparator('alpha', 'beta')
+
+# ================================== Draw stairs 0072
+# def draw_stairs(n):
+#     # stairs = ""
+#     # for step in range(n):
+#     #     stairs += " " * step + "I\n"
+#     # print(stairs)
+#     # return stairs[:-1]
+#     return "\n".join(" " * step + "I" for step in range(n))
+
+# ================================== average 0073
+# def find_average(numbers):
+#     return sum(numbers) / len(numbers) if len(numbers) else 0
+
+# ================================== Beginner Series #1 School Paperwork 0074
+# def paperwork(n, m):
+#     return 0 if n < 0 or m < 0 else n * m
+#     # return n * m if n > 0 and m > 0 else 0
+#     # return max(n, 0)*max(m, 0)
+
+# ================================== Are You Playing Banjo? 0075
+# def are_you_playing_banjo(name):
+#     return name + " plays banjo" if name[0].lower() == "r" else name + " does not play banjo"
+
+# ================================== Invert values 0076
+# def invert(lst):
+#     return [num * -1 for num in lst]
+
+# ================================== Count of positives / sum of negatives 0077
+# def count_positives_sum_negatives(arr):
+#     positive_nums = sum(1 for num in arr if num > 0)
+#     negative_nums = sum(num for num in arr if num < 0)
+#     return [positive_nums, negative_nums] if arr else []
+
+# ================================== Count of positives / sum of negatives 0078
+# def sum_array(a):
+#     return sum(a)
+#     # res = 0
+#     # for num in a:
+#     #     res += num
+#     # return res
+
+# ================================== You only need one - Beginner 0079
+# def check(seq, elem):
+#     return elem in seq
+
+# ================================== Beginner - Reduce but Grow 0080
+# def grow(arr):
+#     res = 1
+#     for num in arr:
+#         res *= num
+#     return res
+# ----
+# from functools import reduce
+# def grow(arr):
+#     return reduce(lambda x, y: x * y, arr)
+# ----
+# import math
+# def grow(arr):
+#     return math.prod(arr)
+
+# ================================== Beginner - Reduce but Grow 0081
+# def bmi(weight, height):
+#     bmi = round(weight / (height ** 2), 1)
+#     check_dict = {
+#         "Underweight": bmi <= 18.5,
+#         "Normal": bmi <= 25,
+#         "Overweight": bmi <= 30,
+#         "Obese": bmi > 30,
+#     }
+#     return [result for result in check_dict if check_dict[result]][0]
+#     # return ['Underweight', 'Normal', 'Overweight', 'Obese'][(b > 30) + (b > 25) + (b > 18.5)]
+
+# ================================== Reversed sequence 0082
+# def reverse_seq(n):
+#     return [num for num in range(n, 0, -1)]
+#     # return list(range(n, 0, -1))
+#     # return range(n, 0, -1)
+
+# ================================== Reversed Words 0083
+# def reverse_words(s):
+#     return " ".join(s.split(" ")[::-1])
+#     # return ' '.join(reversed(str.split(' ')))
+
+# ================================== Simple multiplication 0084
+# def simple_multiplication(number) :
+#     return number * 8 if number % 2 == 0 else number * 9
+
+# ================================== Simple multiplication 0085
+# def zero_fuel(distance_to_pump, mpg, fuel_left):
+#     return fuel_left * mpg >= distance_to_pump
+
+# ================================== DNA to RNA Conversion 0086
+# def dna_to_rna(dna):
+#     return dna.replace("T", "U")
+
+# ================================== Find Maximum and Minimum Values of a List 0087
+# def minimum(arr):
+#     return min(arr)
+#
+# def maximum(arr):
+#     return max(arr)
+
+# ================================== Jenny's secret message 0088
+# def greet(name):
+#     if name == "Johnny":
+#         return "Hello, my love!"
+#     return "Hello, {name}!".format(name=name)
+
+# ================================== Array plus array 0089
+# def array_plus_array(arr1,arr2):
+#     # return sum([sum(arr1), sum(arr2)])
+#     return sum(arr1+arr2)
+
+# ================================== Get Planet Name By ID 0090
+# def get_planet_name(id):
+#
+#     planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+#     return planets[id - 1]
+#
+#     # name=""
+#     # match id:
+#     #     case 1: name = "Mercury"
+#     #     case 2: name = "Venus"
+#     #     case 3: name = "Earth"
+#     #     case 4: name = "Mars"
+#     #     case 5: name = "Jupiter"
+#     #     case 6: name = "Saturn"
+#     #     case 7: name = "Uranus"
+#     #     case 8: name = "Neptune"
+#     # return name
+
+# ================================== Unfinished Loop - Bug Fixing #1 0091
+# def create_array(n):
+#     res=[]
+#     i=1
+#     while i<=n:
+#         res+=[i]
+#         i += 1
+#     return res
+
+# ================================== Grasshopper - If/else syntax debug 0092
+# def check_alive(health):
+#     if health <= 0:
+#         return False
+#     else:
+#         return True
+
+# https://www.codewars.com/kata/search/python?order_by=popularity+desc&q=&r%5B%5D=-8&tags=Debugging&xids=played
 
 # https://www.codewars.com/kata/search/python?q=&r%5B%5D=-8&xids=played&beta=false&order_by=popularity%20desc
