@@ -592,6 +592,172 @@
 #     else:
 #         return True
 
+# ================================== Basic variable assignment 0093
+# a = "code"
+# b = "wa.rs"
+# name = a + b
+
+# ================================== Capitalization and Mutability 0094
+# def capitalize_word(word):
+#     return word[0].upper()+word[1:]
+#     # return word.capitalize() # for the first word in the string
+#     # return word.title()  # for each word in the string
+
+# ================================== 101 Dalmatians - squash the bugs, not the dogs! 0095
+# def how_many_dalmatians(n):
+#     dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIONS!!!"]
+#     return dogs[sum([n > 10, n > 50, n == 101])]
+
+# ================================== Spacify 0096
+# def spacify(string):
+#     return " ".join(char for char in string)
+#     # return " ".join(string)
+# spacify = " ".join
+
+# ================================== Spacify 0097
+# NATO = {
+#   'A': 'Alfa', 'B': 'Bravo', 'C': 'Charlie', 'D': 'Delta', 'E': 'Echo', 'F': 'Foxtrot',
+#   'G': 'Golf', 'H': 'Hotel', 'I': 'India', 'J': 'Juliett', 'K': 'Kilo', 'L': 'Lima',
+#   'M': 'Mike', 'N': 'November', 'O': 'Oscar', 'P': 'Papa', 'Q': 'Quebec', 'R': 'Romeo',
+#   'S': 'Sierra', 'T': 'Tango', 'U': 'Uniform', 'V': 'Victor', 'W': 'Whiskey',
+#   'X': 'Xray', 'Y': 'Yankee', 'Z': 'Zulu'}
+# def to_nato(words):
+#     # words = words.replace(" ", "")
+#     # result = []
+#     # for char in words:
+#     #     if char.upper() in NATO.keys():
+#     #         result.append(NATO.get(char.upper()))
+#     #     else:
+#     #         result.append(char)
+#     # return " ".join(result)
+#     # # return ' '.join(NATO.get(char, char) for char in words.upper() if char != ' ')
+
+# ================================== Grasshopper - Debug 0098
+# def weather_info(temp):
+#     c = convert_to_celsius(temp)
+#     return f"{c} is above freezing temperature" if c > 0 else f"{c} is freezing temperature"
+# def convert_to_celsius(temperature):
+#     return (temperature - 32) * (5 / 9)
+
+# ================================== Is this my tail? 0099
+# def correct_tail(body, tail):
+#     return tail in body[-1]
+
+# ================================== String Templates - Bug Fixing #5 0100
+# def build_string(*args):
+#     return "I like {}!".format(", ".join(args))
+
+# ================================== _FIXME: Replace all dots 0101
+# def replace_dots(str):
+#     return str.replace(".", "-")
+
+# ================================== Fix your code before the garden dies! 0102
+# def rain_amount(rain_amount):
+#     if rain_amount < 40:
+#         return f"You need to give your plant {40 - rain_amount} mm of water"
+#     return "Your plant has had more than enough water for today!"
+
+# ================================== Swap Values 0103
+# def swap_values(args):
+#     temp = args[0]
+#     args[0] = args[1]
+#     args[1] = temp
+#     # ------
+#     # args[0], args[1] = args[1], args[0]
+#     # args[:]=args[::-1]
+#     # args.reverse()
+
+# ================================== Incorrect division method 0104
+# def divide_numbers(x,y):
+#     return x / y
+
+# ================================== Multiply the number 0105
+# def multiply(n):
+#     return n * (5 ** len(str(abs(n))))
+
+# ================================== Fix the Bugs (Syntax) - My First Kata 0106
+# def my_first_kata(a, b):
+#     if a == 0 or b == 0:
+#         return False
+#     if isinstance(a, int) and isinstance(b, int):
+#         return a % b + b % a
+#     return False
+
+# ================================== Return to Sanity 0107
+# def mystery():
+#     results = {'sanity': 'Hello'}
+#     return results
+
+# ================================== Unexpected parsing 0108
+# def get_status(is_busy):
+#     return {"status": "busy" if is_busy else "available"}
+
+# ================================== Switch/Case - Bug Fixing #6 0109
+# def eval_object(v):
+#     match v.get("operation"):
+#         case "+":
+#             return v["a"] + v["b"]
+#         case "-":
+#             return v["a"] - v["b"]
+#         case "/":
+#             return v["a"] / v["b"]
+#         case "*":
+#             return v["a"] * v["b"]
+#         case "%":
+#             return v["a"] % v["b"]
+#         case "**":
+#             return v["a"] ** v["b"]
+#         case _:
+#             return 1
+
+# ================================== Semi-Optional 0110
+# def wrap(value):
+#     return {"value": value}
+
+# ================================== How do I compare numbers? 0111
+# def what_is(x):
+#     if x == 42:
+#         return 'everything'
+#     elif x == 42 * 42:
+#         return 'everything squared'
+#     else:
+#         return 'nothing'
+
+# ================================== Filtering even numbers (Bug Fixes) 0112
+# def kata_13_december(lst):
+#     return [num for num in lst if num % 2 != 0]
+
+# ================================== Invalid Login - Bug Fixing #11 0113
+# def validate(username, password):
+#     database = Database()
+#     return database.login(username, password)
+
+# ================================== They say that only the name is long enough to attract attention.
+# They also said that only a simple Kata will have someone to solve it.
+# This is a sadly story #1: Are they opposite? 0114
+# def is_opposite(s1, s2):
+#     if not (s1 or s2):
+#         return False
+#     if s1.lower() != s2.lower():
+#         return False
+#     for i in range(len(s1)):
+#         if s1[i] == s2[i]:
+#             return False
+#     return True
+#     # return False if not (s1 or s2) else s1.swapcase() == s2
+
+# ================================== Training JS #7: if..else and ternary operator 0115
+# def sale_hotdogs(n):
+#     return n * [100, 95, 90][sum([n >= 5, n >= 10])]
+#     # return n * [100, 95, 90][(n >= 5) + (n >= 10)]
+#     # if n < 5:
+#     #     return n * 100
+#     # elif 5 <= n < 10:
+#     #     return n * 95
+#     # else:
+#     #     return n * 90
+
+
 # https://www.codewars.com/kata/search/python?order_by=popularity+desc&q=&r%5B%5D=-8&tags=Debugging&xids=played
 
 # https://www.codewars.com/kata/search/python?q=&r%5B%5D=-8&xids=played&beta=false&order_by=popularity%20desc
