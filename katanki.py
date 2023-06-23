@@ -757,7 +757,198 @@
 #     # else:
 #     #     return n * 90
 
+# ================================== Count by X 0116
+# def count_by(x, n):
+#     return [num for num in range(x, n * x + x) if num % x == 0]
+#     # return [i * x for i in range(1, n + 1)]
 
-# https://www.codewars.com/kata/search/python?order_by=popularity+desc&q=&r%5B%5D=-8&tags=Debugging&xids=played
+# ================================== If you can't sleep, just count sheep!! 0117
+# def count_sheep(n):
+#     # res = ""
+#     # for num in range(n):
+#     #     res += f"{num+1} sheep..."
+#     # return res
+#     return "".join([f"{num+1} sheep..." for num in range(n)])
 
-# https://www.codewars.com/kata/search/python?q=&r%5B%5D=-8&xids=played&beta=false&order_by=popularity%20desc
+# ================================== You Can't Code Under Pressure #1 0118
+# def doubleInteger(i):
+#     # return i * 2
+#     # return i + i
+#     # return i << 1
+
+# ================================== Rock Paper Scissors! 0119
+# def rps(p1, p2):
+#     if p1 == p2:
+#         return 'Draw!'
+#
+#     if (p1 == 'rock' and p2 == 'scissors') or (p1 == 'paper' and p2 == 'rock') or (p1 == 'scissors' and p2 == 'paper'):
+#         return "Player 1 won!"
+#
+#     return "Player 2 won!"
+
+# def rps(p1, p2):
+#     beats = {'rock': 'scissors', 'scissors': 'paper', 'paper': 'rock'}
+#     if beats[p1] == p2:
+#         return "Player 1 won!"
+#     if beats[p2] == p1:
+#         return "Player 2 won!"
+#     return "Draw!"
+
+# ================================== Total amount of points 0120
+# def points(games):
+#     sum = 0
+#     for team1, separator, team2 in games:
+#         if team1 > team2:
+#             sum += 3
+#         elif team1 == team2:
+#             sum += 1
+#     return sum
+
+# def points(games):
+#     return sum(3 * (team1 > team2) + (team1 == team2) for team1, _, team2 in games)
+
+# print(points(['1:0','2:0','3:0','4:4','2:2','3:3','1:4','2:3','2:4','3:4']))
+
+# ================================== Get the mean of an array 0121
+# def get_average(marks):
+#     return sum(marks) // len(marks)
+
+# ================================== Get the mean of an array 0122
+# def sum_array(arr):
+#     return sum(sorted(arr)[1:-1]) if arr else 0
+
+# ================================== Grasshopper - Grade book 0123
+# def get_grade(s1, s2, s3):
+#     avg = sum([s1, s2, s3]) // 3
+#     return ['F', 'D', 'C', 'B', 'A'][sum([avg >= 60, avg >= 70, avg >= 80, avg >= 90])]
+
+# ================================== Never visit a . . . !? 0124
+# def subtract_sum(number):
+#     raw = number
+#     num_sum = 0
+#     while number > 0:
+#         digit = number % 10
+#         num_sum += digit
+#         number //= 10
+#     if raw - num_sum < 100:
+#         print(raw - num_sum)
+#         return raw - num_sum
+#     else:
+#         subtract_sum(raw - num_sum)
+
+# ================================== Count the Monkeys! 0125
+# def monkey_count(n):
+#     return [n for n in range(1, n + 1)]
+#     # return list(range(1, n+1))
+
+# ================================== Grasshopper - Personalized Message 0126
+# def greet(name, owner):
+#     return 'Hello boss' if name == owner else 'Hello guest'
+
+# ================================== Sum Mixed Array 0127
+# def sum_mix(arr):
+#     return sum([int(num) for num in arr])
+#     # return sum(map(int, arr))
+
+# ================================== Area or Perimeter 0128
+# def area_or_perimeter(l, w):
+#     return l * w if l == w else (l + w) * 2
+
+# ================================== Do I get a bonus? 0129
+# def bonus_time(salary, bonus):
+#     return f"${salary * 10}" if bonus else f"${salary}"
+
+# ================================== The Feast of Many Beasts 0130
+# def feast(beast, dish):
+#     return beast[0]+beast[-1] == dish[0]+dish[-1]
+#     # return beast.startswith(dish[0]) and beast.endswith(dish[-1])
+
+# ================================== Remove exclamation marks 0131
+# def remove_exclamation_marks(s):
+#     return s.replace("!", "")
+#     # return ''.join([x for x in s if x != '!'])
+
+# ================================== Transportation on vacation 0132
+# def rental_car_cost(d):
+#     return d * 40 - [0, 20, 50][sum([d >= 7, d >= 3])]
+#
+#     # cost = 0
+#     # if d >= 7:
+#     #     cost = d * 40 - 50
+#     # elif d >= 3:
+#     #     cost = d * 40 - 20
+#     # else:
+#     #     cost = d * 40
+#     # return cost
+#
+#     # return d * 40 - (d > 2) * 20 - (d > 6) * 30
+
+# ================================== Thinkful - Logic Drills: Traffic light 0133
+# def update_light(current):
+#     # traffic_lights = ["green", "yellow", "red"]
+#     # for i in range(3):
+#     #     if traffic_lights[i] == current:
+#     #         print(traffic_lights[i + 1] if i < 2 else "green")
+#
+#     traffic_lights = ["green", "yellow", "red"]
+#     return [traffic_lights[i + 1] if i < 2 else "green" for i in range(3) if traffic_lights[i] == current][0]
+#
+#     # return {"green": "yellow", "yellow": "red", "red": "green"}[current]
+#     # return traffic_lights[(traffic_lights.index(current) + 1) % len(traffic_lights)]
+#     # update_light = lambda c, l=["yellow", "green", "red"]: l[l.index(c) - 1]
+#
+# print(update_light('green'))
+# print(update_light('yellow'))
+# print(update_light('red'))
+
+# ================================== Digital cypher (encode) 0134
+# def encode(message, key):
+#     # msg_len = len(message)
+#     # str_key = str(key)
+#     # full_key = []
+#     # i = 0
+#     # for _ in range(msg_len):
+#     #     if len(str_key) == i:
+#     #         i = 0
+#     #     full_key.append(int(str_key[i]))
+#     #     i += 1
+#     # return [(ord(message[i]) - 96) + full_key[i] for i in range(msg_len)]
+#
+#     msg_len = len(message)
+#     str_key = str(key)
+#     full_key = []
+#     i = 0
+#     for _ in range(msg_len):
+#         full_key.append(int(str_key[i]))
+#         i = (i + 1) % len(str_key)
+#     return [(ord(message[i]) - 96) + full_key[i] for i in range(msg_len)]
+
+# from itertools import cycle
+# def encode(message, key):
+#     return [
+#         ord(a) - 96 + int(b)
+#         for a, b in zip(
+#             message, cycle(str(key))
+#         )
+#     ]
+
+# ================================== Digital cypher vol 2 (decode) 0135
+# from itertools import cycle
+# def decode(code, key):
+#     return "".join(chr(a - int(b) + 96) for a, b in zip(code, cycle(str(key))))
+#
+# print(decode([20, 12, 18, 30, 21], 1939)) # scout
+# print(decode([14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8], 1939))
+
+# ================================== The Barksdale Code 0135
+# def decode(string):
+#     keys = {'1': '9', '2': '8', '3': '7', '4': '6', '5': '0', '6': '4', '7': '3', '8': '2', '9': '1', '0': '5'}
+#     return "".join(keys.get(char) for char in string)
+#     # return s.translate(str.maketrans("1234567890", "9876043215"))
+
+# https://www.codewars.com/kata/search/python?q=&r%5B%5D=-7&tags=Cryptography&xids=played&beta=false&order_by=popularity%20desc
+
+
+
+
+
