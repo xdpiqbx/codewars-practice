@@ -940,15 +940,130 @@
 # print(decode([20, 12, 18, 30, 21], 1939)) # scout
 # print(decode([14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8], 1939))
 
-# ================================== The Barksdale Code 0135
-# def decode(string):
-#     keys = {'1': '9', '2': '8', '3': '7', '4': '6', '5': '0', '6': '4', '7': '3', '8': '2', '9': '1', '0': '5'}
-#     return "".join(keys.get(char) for char in string)
-#     # return s.translate(str.maketrans("1234567890", "9876043215"))
+# ================================== Decoding a message 0136
+# def decode(message):
+#     alphabet = "".join([chr(i) for i in range(97, 123)])
+#     return message.translate(str.maketrans(alphabet, alphabet[::-1]))
+#
+# # from string import ascii_lowercase as alphabet
+# # def decode(message):
+# #     return message.translate(str.maketrans(alphabet, alphabet[::-1]))
+
+# ================================== GA-DE-RY-PO-LU-KI cypher 0137
+# def encode(message):
+#     return message.translate(str.maketrans("AEYOUIaeyouiGDRPLKgdrplk", "GDRPLKgdrplkAEYOUIaeyoui"))
+# def decode(message):
+#     return encode(message)
+
+# ================================== Tap Code Translation 0138
+# def tap_code_translation(text):
+#     text = text.replace("k", "c")
+#     key = [
+#         ["a", "b", "c", "d", "e"],
+#         ["f", "g", "h", "i", "j"],
+#         ["l", "m", "n", "o", "p"],
+#         ["q", "r", "s", "t", "u"],
+#         ["v", "w", "x", "y", "z"],
+#     ]
+#     key_map = {}
+#     for i in range(len(key)):
+#         for j in range(len(key[i])):
+#             key_map[key[i][j]] = [i+1, j+1]
+#     return " ".join([f"{num1*'.'} {num2*'.'}" for num1, num2 in [key_map.get(char) for char in text]])
+
+# ================================== Mirroring cipher 0139
+# from string import ascii_lowercase as alphabet
+# def mirror(code, letters=alphabet):
+#     return code.lower().translate(str.maketrans(letters, letters[::-1]))
+
+# ================================== Number encrypting: cypher 0140
+# def cypher(string):
+#     # keys_map = {
+#     #     "I": "1", "R": "2", "E": "3", "A": "4", "S": "5",
+#     #     "G": "6", "T": "7", "B": "8", "O": "0",
+#     #     "l": "1", "z": "2", "e": "3", "a": "4", "s": "5",
+#     #     "b": "6", "t": "7", "g": "9", "o": "0"
+#     # }
+#     # return "".join([keys_map.get(char, char) for char in string])
+#
+#     # letters = "IREASGTBlzeasbtgoO"
+#     # numbers = "123456781234567900"
+#     # return string.translate(str.maketrans(letters, numbers))
+
+# ================================== Cipher from math problem 0141
+# def encrypt(word, n):
+#     def mult_and_subtract(char_num, num):
+#         for _ in range(num):
+#             char_num = char_num * 3 - 5
+#         return char_num
+#
+#     return [mult_and_subtract(ord(char) - 96, n) for char in word]
+#
+#
+# def decrypt(encrypted_word, n):
+#     def division_and_sum(enc_char, num):
+#         for _ in range(num):
+#             # enc_char = enc_char // 3 + 2
+#             enc_char = (enc_char + 5) // 3
+#         return enc_char
+#
+#     return "".join([chr(division_and_sum(number, n) + 96) for number in encrypted_word])
+#
+#
+# print(encrypt("hello", 3))  # [151, 70, 259, 259, 340])
+# print(encrypt("hello", 10))  # [324772, 147625, 560968, 560968, 738115])
+# print(encrypt("codewars", 2))  # [7, 115, 16, 25, 187, -11, 142, 151])
+# print(encrypt("codewars", 0))  # [3, 15, 4, 5, 23, 1, 18, 19])
+# print(encrypt("test", -383527))  # [20, 5, 19, 20])
+# print(encrypt("test", 5))  # [4255, 610, 4012, 4255])
+# print(encrypt("james", 7))  # [16405, -3278, 22966, 5470, 36088])
+# print(encrypt("belfry", 9))  # [-9839, 49210, 186991, 68893, 305089, 442870])
+#
+# print(decrypt([7, 115, 16, 61, 106, 43], 2))  # "coding")
+# print(decrypt([29527, 738115, 88576, 383821, 679066, 265723], 10))  # "coding")
+# print(decrypt([-119, -38, 43, 124, 205, 286, 367], 4))  # "abcdefg")
+# print(decrypt([-3278, -1091, 1096, 3283, 5470, 7657, 9844], 7))  # "abcdefg")
+# print(decrypt([20, 5, 19, 20], 0))  # "test")
+# print(decrypt([3, 9, 16, 8, 5, 18], -39245382957))  # "cipher")
+# print(decrypt([46, 64, 10, 49, 55, 70], 1))  # "qwerty")
+# print(decrypt([25, 106, 7, 142, 205, 124, 160, 61, 106, 43], 2))  # "encrypting")
+
+# ================================== Distance from the average 0142
+# def distances_from_average(test_list):
+#     avg = round(sum(test_list) / len(test_list), 2)
+#     return [round(avg - num, 2) for num in test_list]
+
+# ================================== Two fighters, one winner. 0143
+# class Fighter(object):
+#     def __init__(self, name, health, damage_per_attack):
+#         self.name = name
+#         self.health = health
+#         self.damage_per_attack = damage_per_attack
+#
+#     def __str__(self): return "Fighter({}, {}, {})".format(self.name, self.health, self.damage_per_attack)
+#
+#     __repr__ = __str__
+#
+# def declare_winner(fighter1, fighter2, first_attacker):
+#     if fighter1.name == first_attacker:
+#         fighter2.health -= fighter1.damage_per_attack
+#         return fighter1.name if fighter2.health <= 0 else declare_winner(fighter1, fighter2, fighter2.name)
+#     else:
+#         fighter1.health -= fighter2.damage_per_attack
+#         return fighter2.name if fighter1.health <= 0 else declare_winner(fighter1, fighter2, fighter1.name)
+
+# ================================== Bingo ( Or Not ) 0144
+# def bingo(array):
+#     bingo_nums = sorted(ord(char) - 64 for char in "BINGO")
+#     return "WIN" if sum(1 for num in bingo_nums if num in array) >= 5 else "LOSE"
+#
+#     # return "WIN" if {2, 7, 9, 14, 15}.issubset(set(array)) else "LOSE"
+#     # return "WIN" if all(i in array for i in [2,9,14,7,15]) else "LOSE"
+#
+#
+# print(bingo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+# print(bingo([1, 2, 3, 7, 5, 14, 7, 15, 9, 10]))
+# print(bingo([5, 2, 13, 7, 5, 14, 17, 15, 9, 10]))
+
 
 # https://www.codewars.com/kata/search/python?q=&r%5B%5D=-7&tags=Cryptography&xids=played&beta=false&order_by=popularity%20desc
-
-
-
-
-
