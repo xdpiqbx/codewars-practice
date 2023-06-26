@@ -1209,21 +1209,72 @@
 # def longest(a1, a2):
 #     return "".join(sorted(set(a1 + a2)))
 
-# ================================== Friend or Foe? 0163
-def friend(x):
-    return [y for y in x if len(y) == 4]
+# ================================== Determine if the poker hand is flush 0163
+# def is_flush(cards):
+#     return len(set([card[-1] for card in cards])) == 1
 
+# ================================== Coding 3min: Bug in Apple 0164
+# def sc(apple):
+#     for i in range(0, len(apple)):
+#         for j in range(0, len(apple[i])):
+#             if apple[i][j] == "B":
+#                 return [i, j]
+#
+# # def sc(apple):
+# #     for i in apple :
+# #         for j in i:
+# #             if j == "B" :
+# #                 return [apple.index(i),i.index(j)]
+# # def sc(apple):
+# #     return [[x,y.index("B")] for x,y in enumerate(apple) if "B" in y][0]
+# apple = [
+#         ["B", "A", "A", "A", "A"],
+#         ["A", "A", "A", "A", "A"],
+#         ["A", "A", "A", "A", "A"],
+#         ["A", "A", "A", "A", "A"],
+#         ["A", "A", "A", "A", "A"]
+#     ]
+#
+# print(sc(apple))
 
+# ================================== Categorize New Member 0165
+# def open_or_senior(data):
+#     result = []
+#     for age, handicap in data:
+#         result.append("Senior") if age >= 55 and handicap > 7 else result.append("Open")
+#     return result
+#     # return ["Senior" if age >= 55 and handicap >= 8 else "Open" for (age, handicap) in data]
 
+# ================================== Find the next perfect square! 0166
+# def find_next_square(sq):
+#     return int(((sq ** 0.5) + 1) ** 2) if not (sq ** 0.5) % 1 else -1
+# print(find_next_square(625))
 
+# ================================== Find the next perfect square! 0167
+# def printer_error(s):
+#     return f"{sum(s.count(chr(i)) for i in range(111, 123))}/{len(s)}"
 
+# ================================== Growth of a Population 0168
+# def nb_year(p0, percent, aug, p):
+#     percent = percent / 100
+#     years = 0
+#     while p0 < p:
+#         p0 += int(p0 * percent + aug)
+#         years += 1
+#     return years
 
+# ================================== Binary Addition 0169
+# def add_binary(a, b):
+#     return bin(a+b)[2:]
 
+# ================================== Binary Addition 0170
+# def is_triangle(a, b, c):
+#     m = max(a, b, c)
+#     return (a + b + c) - m > m
+#     # return 2 * max(a, b, c) < a + b + c
 
-
-
-
-
-
-
+# ================================== String ends with? 0171
+# def solution(text, ending):
+#     return text[-len(ending):] == ending
+#     # return string.endswith(ending)
 
