@@ -1065,5 +1065,165 @@
 # print(bingo([1, 2, 3, 7, 5, 14, 7, 15, 9, 10]))
 # print(bingo([5, 2, 13, 7, 5, 14, 17, 15, 9, 10]))
 
+# ================================== Circle cipher 0145
+# def encode(string: str) -> str:
+#     # length = len(string)
+#     #
+#     # left = list(string[0:length // 2])
+#     # right_reversed = list(string[length // 2:][::-1])
+#     #
+#     # if len(left) < len(right_reversed):
+#     #     left.append("")
+#     #
+#     # return "".join([left[i] + right_reversed[i] for i in range(len(left))])
+#
+#     # string = list(string)
+#     # end_word = ""
+#     # while len(string):
+#     #     end_word += string.pop(0)
+#     #     if len(string):
+#     #         end_word += string.pop(-1)
+#     # return end_word
+#
+#     # return string and string[0] + encode(string[:0:-1])
 
-# https://www.codewars.com/kata/search/python?q=&r%5B%5D=-7&tags=Cryptography&xids=played&beta=false&order_by=popularity%20desc
+# def decode(encoded: str) -> str:
+#     # l = ""
+#     # r = ""
+#     #
+#     # for i in range(len(encoded)):
+#     #     if i % 2 == 0:
+#     #         l += encoded[i]
+#     #     else:
+#     #         r += encoded[i]
+#     #
+#     # return l + r[::-1]
+#     return encoded[::2] + encoded[1::2][::-1]
+
+#
+# print("encoded [codewars]: ", encode("codewars"))
+# print("encoded [white]: ", encode("white"))
+
+# print("decode [csordaew]: ", decode("csordaew"))
+# print("decode [wehti]: ", decode("wehti"))
+
+# ================================== Disemvowel Trolls 0146
+# def disemvowel(string_):
+#     for char in "aeiouAEIOU":
+#         string_ = string_.replace(char, "")
+#     return string_
+#     # return "".join(c for c in string if c.lower() not in "aeiou")
+
+# ================================== Square Every Digit 0147
+# def square_digits(num):
+#     return int("".join(str(int(i)**2) for i in list(str(num))))
+
+# ================================== Highest and Lowest 0148
+# def high_and_low(numbers):
+#     int_arr = sorted(int(num) for num in numbers.split(" "))
+#     return f"{int_arr[-1]} {int_arr[0]}"
+# print(high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+
+# ================================== Descending Order 0149
+# def descending_order(num):
+#     return int("".join(sorted(list(str(num)))[::-1]))
+
+# ================================== Descending Order 0150
+# def get_middle(s):
+#     l = len(s)
+#     return s[l // 2 - 1: l // 2 + 1] if l % 2 == 0 else s[l // 2]
+#     # index, odd = divmod(len(s), 2)
+#     # return s[index] if odd else s[index - 1:index + 1]
+
+# ================================== Mumbling 0151
+# def accum(s):
+#     s = s.lower()
+#     return "-".join(item.capitalize() for item in [s[i] * (i+1) for i in range(len(s))])
+#     # return '-'.join(c.upper() + c.lower() * i for i, c in enumerate(s))
+
+# ================================== You're a square! 0152
+# def is_square(n):
+#     return round(n ** 0.5) ** 2 == n if n >= 0 else False
+#     # return n >= 0 and (n ** 0.5) % 1 == 0
+
+# ================================== List Filtering 0153
+# def filter_list(l):
+#     # return [item for item in l if str.isnumeric(str(item))]
+#     # return [i for i in l if not isinstance(i, str)]
+#     # return [item for item in l if isinstance(item, int)]
+#     return [item for item in l if type(item).__name__ == "int"]
+
+# ================================== Isograms 0154
+# def is_isogram(string):
+#     return len(set(string.lower())) == len(string)
+
+# ================================== Exes and Ohs 0155
+# def xo(s):
+#     s = s.lower()
+#     # x = 0
+#     # o = 0
+#     #
+#     # for char in s:
+#     #     if char == "x":
+#     #         x += 1
+#     #     if char == "o":
+#     #         o += 1
+#     #
+#     # return True if x == 0 and o == 0 else x == o
+#    return s.count('x') == s.count('o')
+
+# ================================== Jaden Casing Strings 0156
+# def to_jaden_case(string):
+#     return " ".join([word.capitalize() for word in string.split(" ")])
+#     # return ' '.join(word.capitalize() for word in string.split())
+
+# write your code here
+
+# ================================== Shortest Word 0157
+# def find_short(s):
+#     return min([len(word) for word in s.split(" ")])
+
+# ================================== Complementary DNA 0158
+# def DNA_strand(dna):
+#     return dna.translate(str.maketrans("ATCG", "TAGC"))
+
+# ================================== Credit Card Mask 0159
+# return masked string
+# def maskify(cc):
+#     cc_len = len(cc)
+#     return '#' * (cc_len - 4) + cc[cc_len - 4:] if cc_len > 4 else cc
+#     # return '#' * (len(cc) - 4) + cc[-4:]
+
+# ================================== Sum of two lowest positive integers 0160
+# def sum_two_smallest_numbers(numbers):
+#     numbers.sort()
+#     return numbers[0] + numbers[1]
+#     # return sum(sorted(numbers)[:2])
+
+# ================================== Beginner Series #3 Sum of Numbers 0161
+# def get_sum(a, b):
+#     return sum(list(range(min(a, b), max(a, b) + 1)))
+#     # return (a + b) * (abs(a - b) + 1) // 2
+
+# ================================== Two to One 0162
+# def longest(a1, a2):
+#     return "".join(sorted(set(a1 + a2)))
+
+# ================================== Friend or Foe? 0163
+def friend(x):
+    return [y for y in x if len(y) == 4]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
