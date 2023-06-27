@@ -1286,7 +1286,7 @@
 #             total_stones += i + j
 #     return total_stones
 #     # return sum(range(n+2)) * n
-
+#
 # print(1, dots_on_domino_bones(1))
 # print(2, dots_on_domino_bones(2))
 # print(3, dots_on_domino_bones(3))
@@ -1297,8 +1297,23 @@
 # print(8, dots_on_domino_bones(8))
 # print(9, dots_on_domino_bones(9))
 # print(10, dots_on_domino_bones(10))
+#
+#
+# for i in range(5):
+#     print(i)  # 0 1 2 3 4
+#
+# for i in range(1, 5):
+#     print(i)  # 1 2 3 4
 
 # ================================== Pyramid Array 0173
 # def pyramid(n):
 #     return [[1 for _ in range(i+1)] for i in range(n)]
-#     # return [ [1] * i for i in range(1, n+1) ]
+#     # return [[1] * i for i in range(1, n+1)]
+
+
+
+
+
+
+
+
