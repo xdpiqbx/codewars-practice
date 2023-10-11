@@ -1341,3 +1341,32 @@
 # #     return x * y
 # print(max_product([56, 335, 195, 443, 6, 494, 252]))
 
+# =============================================================== Ones and Zeros.
+# def binToInt(arr: list[int]) -> int:
+#     nums_str = "".join([str(a) for a in arr])
+#     return int(nums_str, 2)
+
+# def binary_array_to_number(arr: list[int]) -> int:
+#     return int("".join([str(a) for a in arr]), 2)
+#     # return int("".join(map(str, arr)), 2)
+#
+#
+# print(binary_array_to_number([0, 1, 0, 1]))
+
+# =============================================================== Odd or Even?
+# def odd_or_even(arr: list[int]) -> str:
+#     if not arr:
+#         arr = [0]
+#     num = sum(arr)
+#     return "even" if num % 2 == 0 else "odd"
+
+# def odd_or_even(arr: list[int]) -> str:
+#     # if not arr:
+#         # arr = [0]
+#     return "even" if sum(arr) % 2 == 0 else "odd"
+
+# =============================================================== Reverse words
+# def reverse_words(text):
+#     return " ".join([word[::-1] for word in text.split(" ")])
+
+# =============================================================== 
