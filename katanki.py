@@ -1384,6 +1384,7 @@
 # def divisors(integer):
 #     return [i for i in range(2, integer) if not integer % i] or f'{integer} is prime'
 
+# =============================================================== Sum of the first nth term of Series
 def series_sum(n):
     # return str(round(sum([(1 / (i * 3 + 1)) for i in range(n)]), 2))
     return '{:.2f}'.format(sum(1 / (i * 3 + 1) for i in range(n)))
