@@ -1385,18 +1385,15 @@
 #     return [i for i in range(2, integer) if not integer % i] or f'{integer} is prime'
 
 # =============================================================== Sum of the first nth term of Series
-def series_sum(n):
-    # return str(round(sum([(1 / (i * 3 + 1)) for i in range(n)]), 2))
-    return '{:.2f}'.format(sum(1 / (i * 3 + 1) for i in range(n)))
+# def series_sum(n):
+#     # return str(round(sum([(1 / (i * 3 + 1)) for i in range(n)]), 2))
+#     return '{:.2f}'.format(sum(1 / (i * 3 + 1) for i in range(n)))
 
 # 1 --> 1 --> "1.00"
 # 2 --> 1 + 1/4 --> "1.25"
 # 5 --> 1 + 1/4 + 1/7 + 1/10 + 1/13 --> "1.57"
 
-
-print(series_sum(1))
-print(series_sum(2))
-print(series_sum(3))
-print(series_sum(4))
-print(series_sum(5))
-print(series_sum(6))
+# =============================================================== Remove the minimum
+def remove_smallest(numbers):
+    smallest = min(numbers)
+    
